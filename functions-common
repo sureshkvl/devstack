@@ -1531,7 +1531,7 @@ function screen_process {
     # The pid saved can be used in stop_process() as a process group
     # id to kill off all child processes
     if [[ -n "$group" ]]; then
-        command="sg $group '$command'"
+        command="sudo sg $group '$command'"
     fi
 
     # Append the process to the screen rc file
